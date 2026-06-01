@@ -1,19 +1,8 @@
 ---
 title: A Brain-Wide Atlas of Intrinsic Neural Timescales in Mice
-authors:
-  - name: Süheyl Berat Gülenç
-  - name: Kayla Stafford
-  - name: Zhiyi Yang
-  - name: Vikramaditya Bisani
-bibliography:
-  - bib.bib
+abstract: |
+    Understanding how the brain integrates information requires a shift from localized functional studies to mapping a brain-wide temporal architecture. Intrinsic neural timescales (ITs), defined as the decay time constant of a neuron's spontaneous spiking autocorrelation, provide a quantitative proxy for how long a local circuit retains information about its recent activity. Yet their accurate estimation has historically been limited by computational biases in spike train analysis and the oversimplified assumption that each neuron operates on a single characteristic timescale. In this study, we address these limitations by applying a hybrid framework combining the unbinned intrinsic Spike Time Tiling Coefficient (iSTTC) autocorrelation estimator with Bayesian Information Criterion (BIC)-guided multi-exponential modeling to 89,047 single units across 266 mouse brain regions. We confirm a rostro-caudal timescale gradient, with the median effective timescale approximately 4.5-fold longer in the hindbrain (956 ms) than in the forebrain (213 ms), consistent with recent brain-wide mapping efforts. We further demonstrate that 73.9% of neurons are better described by multi-component models, and find that fast and slow dynamical modes co-vary sublinearly across regions. These findings lay the groundwork for future analyses linking single-neuron dynamics to the emergence of stable, population-level representations required for decision making and adaptive behavior.
 ---
-
-## Abstract
-
-Understanding how the brain integrates information requires a shift from localized functional studies to mapping a brain-wide temporal architecture. Intrinsic neural timescales (ITs), defined as the decay time constant of a neuron's spontaneous spiking autocorrelation, provide a quantitative proxy for how long a local circuit retains information about its recent activity. Yet their accurate estimation has historically been limited by computational biases in spike train analysis and the oversimplified assumption that each neuron operates on a single characteristic timescale. In this study, we address these limitations by applying a hybrid framework combining the unbinned intrinsic Spike Time Tiling Coefficient (iSTTC) autocorrelation estimator with Bayesian Information Criterion (BIC)-guided multi-exponential modeling to 89,047 single units across 266 mouse brain regions. We confirm a rostro-caudal timescale gradient, with the median effective timescale approximately 4.5-fold longer in the hindbrain (956 ms) than in the forebrain (213 ms), consistent with recent brain-wide mapping efforts. We further demonstrate that 73.9% of neurons are better described by multi-component models, and find that fast ($\tau_1$) and slow ($\tau_2$) dynamical modes co-vary sublinearly across regions. These findings lay the groundwork for future analyses linking single-neuron dynamics to the emergence of stable, population-level representations required for decision making and adaptive behavior.
-
-**Keywords:** Intrinsic Timescales, Brain-Wide Mapping, Multi-Exponential Modeling, Neural Dynamics
 
 ## Introduction
 
@@ -63,10 +52,6 @@ Because intrinsic timescales were estimated from the full spontaneous epoch, ear
 
 This research was conducted as part of Neuromatch's Impact Scholars Program. We thank the International Brain Laboratory for the publicly available Neuropixels dataset, and acknowledge the methodological frameworks developed by {cite}`pochinok2026` and {cite}`shi2025`.
 
-## References
-
-```{bibliography}
-```
 
 ---
 
