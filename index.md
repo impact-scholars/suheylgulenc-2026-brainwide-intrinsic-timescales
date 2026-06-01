@@ -99,10 +99,18 @@ Distribution of $\tau_\text{eff}$ across neurons grouped into firing rate bins (
 Histogram of $\tau_\text{eff}$ across all well-fitted neurons (log-scaled x-axis), revealing a broad, right-skewed distribution with a mode near 800 ms and a heavy tail extending beyond 1,000 ms.
 ```
 
-(supp-table-1a)=
 ## Supplementary Tables
 
-**Supplementary Table 1a: Nested variance decomposition.** Proportion of variance in $\log_{10}(\tau_\text{eff})$ attributable to each level of the data hierarchy, estimated before and after including Beryl region (266 levels) as a fixed effect. The reduction in mouse and session variance after adding region indicates that apparent inter-individual variability largely reflects differences in anatomical sampling across recordings.
+
+```{raw:typst}
+   #let orig_tablex = tablex
+   #let tablex = (..args) => block(breakable: false, orig_tablex(..args))
+```
+
+:::{table} **Nested variance decomposition.** Proportion of variance in $\log_{10}(\tau_\text{eff})$ attributable to each level of the data hierarchy, estimated before and after including Beryl region (266 levels) as a fixed effect. The reduction in mouse and session variance after adding region indicates that apparent inter-individual variability largely reflects differences in anatomical sampling across recordings.
+:label: supp-table-1a
+:align: center
+
 
 | Source | Within region | With region fixed effect |
 |--------|:-------------:|:------------------------:|
@@ -111,10 +119,17 @@ Histogram of $\tau_\text{eff}$ across all well-fitted neurons (log-scaled x-axis
 | Probe (within session) | 6.2% | 2.4% |
 | Neuron residual | 66.5% | 85.1% |
 
-**Supplementary Table 1b: Mixed-effects model results across parcellation levels.** Variance explained ($R^2$) and significance of the anatomical gradient at three levels of granularity, with mouse identity as a random intercept. CV $R^2$ denotes 5-fold cross-validated $R^2$ (mean ± s.d.). Mouse var (%) is the proportion of total variance captured by the mouse random intercept in each model. LRT: likelihood ratio test of the anatomical fixed effect against a null model with random intercept only.
+:::
+
+
+:::{table} **Mixed-effects model results across parcellation levels.** Variance explained ($R^2$) and significance of the anatomical gradient at three levels of granularity, with mouse identity as a random intercept. CV $R^2$ denotes 5-fold cross-validated $R^2$ (mean ± s.d.). Mouse var (%) is the proportion of total variance captured by the mouse random intercept in each model. LRT: likelihood ratio test of the anatomical fixed effect against a null model with random intercept only.
+:label: supp-table-1b
+:align: center
 
 | Parcellation level | Number of divisions | $R^2$ | CV $R^2$ | Mouse var (%) | LRT $\chi^2$ (df) | $p$ |
 |--------------------|:-------------------:|:-----:|:---------:|:-------------:|:-----------------:|:---:|
 | Major division (forebrain/midbrain/hindbrain) | 3 | 0.189 | 0.189 ± 0.007 | 10.2 | 11,072 (2) | < 0.001 |
 | Beryl subdivision (e.g., isocortex, hippocampal formation) | 12 | 0.254 | 0.254 ± 0.005 | 9.5 | 16,996 (11) | < 0.001 |
 | Beryl region (e.g., CA1, VISp, MRN) | 266 | 0.314 | 0.309 ± 0.004 | 8.0 | 22,698 (265) | < 0.001 |
+
+:::
