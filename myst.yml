@@ -4,7 +4,6 @@ extends:
 - https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.2.0/isp-micropublication-2025.yml
 
 project:
-  # doi: 10.5281/zenodo.XXXXXXX
   date: 2026-05-26
   authors:
   - name: Süheyl Berat Gülenç
