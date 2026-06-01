@@ -4,15 +4,87 @@ extends:
 - https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.1.0/isp-micropublication-2025.yml
 
 project:
-  authors: []
+  # doi: 10.5281/zenodo.XXXXXXX
+  date: 2026-05-26
+  authors:
+  - name: Gülenç, S.B.
+    orcid: 0009-0000-2009-5332
+    affiliations:
+    - Yıldız Technical University
+    roles: 
+    - conceptualization
+    - data curation
+    - funding acquisition
+    - investigation
+    - methodology
+    - project administration
+    - software
+    - visualization
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Stafford, K.
+    orcid: 0009-0000-9269-5249
+    affiliations:
+    - University of New Brunswick
+    roles: 
+    - conceptualization
+    - data curation
+    - funding acquisition
+    - investigation
+    - project administration
+    - software
+    - validation
+    - visualization
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Yang, Z.
+    orcid: 0009-0006-7111-973X
+    affiliations:
+    - The Hong Kong University of Science and Technology
+    roles: 
+    - conceptualization
+    - data curation
+    - investigation 
+    - project administration
+    - software
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Bisani, V.
+    orcid: 0009-0001-2593-6580
+    roles: 
+    - conceptualization
+    - data curation
+    - formal analysis
+    - project administration
+    - resources
+    - software
+    - writing - review & editing
+
+  - name: Manley, J.
+    orcid: 0000-0003-3505-8707
+    roles: 
+    - conceptualization
+    - methodology
+    - project administration
+    - supervision
+    - validation
+    - writing - review & editing
+   
   toc:
   - file: index.md
-  id:
-  title:
-  keywords: []
-  github:
+
+  id: isp-micropublication-decisive-times
+  title: A Brain-Wide Atlas of Intrinsic Neural Timescales in Mice
+  abstract: |
+    Understanding how the brain integrates information requires a shift from localized functional studies to mapping a brain-wide temporal architecture. Intrinsic neural timescales (ITs), defined as the decay time constant of a neuron's spontaneous spiking autocorrelation, provide a quantitative proxy for how long a local circuit retains information about its recent activity. Yet their accurate estimation has historically been limited by computational biases in spike train analysis and the oversimplified assumption that each neuron operates on a single characteristic timescale. In this study, we address these limitations by applying a hybrid framework combining the unbinned intrinsic Spike Time Tiling Coefficient (iSTTC) autocorrelation estimator with Bayesian Information Criterion (BIC)-guided multi-exponential modeling to 89,047 single units across 266 mouse brain regions. We confirm a rostro-caudal timescale gradient, with the median effective timescale approximately 4.5-fold longer in the hindbrain (956 ms) than in the forebrain (213 ms), consistent with recent brain-wide mapping efforts. We further demonstrate that 73.9% of neurons are better described by multi-component models, and find that fast and slow dynamical modes co-vary sublinearly across regions. These findings lay the groundwork for future analyses linking single-neuron dynamics to the emergence of stable, population-level representations required for decision making and adaptive behavior.
+  keywords:
+  - intrinsic timescale
+  - neural dynamics
+  - brain-wide mapping
+  - multi-exponential modeling
+  github: https://github.com/PinkFreud-2004/DecisiveTimesPublication
   bibliography:
   - bib.bib
-
-site:
-  template: https://raw.githubusercontent.com/impact-scholars/myst-theme/v0.1.0/.deploy/book/template.yml
