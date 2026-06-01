@@ -1,8 +1,21 @@
 name: isp-paper
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - python>=3.10
   - mystmd
   - nodejs>=18
   - typst
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - tqdm
+  - joblib
+  - numba
+  - pip
+  - pip:
+    - ONE-api
+    - ipywidgets

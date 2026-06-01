@@ -1,18 +1,88 @@
 version: 1
 extends:
-- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.1.0/nexus.yml
-- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.1.0/isp-micropublication-2025.yml
+- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.2.0/nexus.yml
+- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.2.0/isp-micropublication-2025.yml
 
 project:
-  authors: []
+  # doi: 10.5281/zenodo.XXXXXXX
+  date: 2026-05-26
+  authors:
+  - name: Süheyl Berat Gülenç
+    orcid: 0009-0000-2009-5332
+    affiliations:
+    - Yıldız Technical University
+    roles:
+    - conceptualization
+    - data curation
+    - funding acquisition
+    - investigation
+    - methodology
+    - project administration
+    - software
+    - visualization
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Kayla Stafford
+    orcid: 0009-0000-9269-5249
+    affiliations:
+    - University of New Brunswick
+    roles:
+    - conceptualization
+    - data curation
+    - funding acquisition
+    - investigation
+    - project administration
+    - software
+    - validation
+    - visualization
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Zhiyi Yang
+    orcid: 0009-0006-7111-973X
+    affiliations:
+    - The Hong Kong University of Science and Technology
+    roles:
+    - conceptualization
+    - data curation
+    - investigation
+    - project administration
+    - software
+    - writing - original draft
+    - writing - review & editing
+
+  - name: Vikramaditya Bisani
+    orcid: 0009-0001-2593-6580
+    roles:
+    - conceptualization
+    - data curation
+    - formal analysis
+    - project administration
+    - resources
+    - software
+    - writing - review & editing
+
+  - name: Jason Manley
+    orcid: 0000-0003-3505-8707
+    roles:
+    - conceptualization
+    - methodology
+    - project administration
+    - supervision
+    - validation
+    - writing - review & editing
+
   toc:
   - file: index.md
-  id:
-  title:
-  keywords: []
-  github:
+
+  id: isp-micropublication-decisive-times
+  title: A Brain-Wide Atlas of Intrinsic Neural Timescales in Mice
+  keywords:
+  - intrinsic timescale
+  - neural dynamics
+  - brain-wide mapping
+  - multi-exponential modeling
+  github: https://github.com/impact-scholars/suheylgulenc-2026-brainwide-intrinsic-timescales
   bibliography:
   - bib.bib
-
-site:
-  template: https://raw.githubusercontent.com/impact-scholars/myst-theme/v0.1.0/.deploy/book/template.yml
