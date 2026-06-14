@@ -3,8 +3,8 @@ Neural Timescale Analysis -- iSTTC Method
 ==========================================
 Plots:
   - Effective Intrinsic Timescale x Firing Rate
-  - tau_eff Population Distribution
   - Timescale Components Distribution
+  - tau_eff Population Distribution
 
 Usage:
     python dashboard.py
@@ -51,35 +51,6 @@ FIG_KW = dict(dpi=150, facecolor="white")
 
 TAU = "tau_eff"
 
-
-# ==============================================================================
-# Timescale Components Distribution
-# ==============================================================================
-def plot_01_n_components(df, output_dir):
-    if "n_components" not in df.columns:
-        print("WARNING: 'n_timescales' column not found -- skipping Timescale Components Distribution.")
-        return
-    counts = df["n_components"].value_counts().sort_index()
-    fracs  = counts / counts.sum() * 100
-
-    fig, ax = plt.subplots(figsize=(6, 5), **FIG_KW)
-    bars = ax.bar(fracs.index.astype(str), fracs.values,
-                  color=[COLOR_SHORT, COLOR_MID, COLOR_LONG, "#9467bd"],
-                  edgecolor="white", linewidth=0.6)
-    for bar, pct in zip(bars, fracs.values):
-        ax.text(bar.get_x() + bar.get_width() / 2,
-                bar.get_height() + 0.5, f"{pct:.1f}%",
-                ha="center", fontsize=10)
-    ax.set_xlabel("Number of Timescale Components", fontsize=12)
-    ax.set_ylabel("% of Units", fontsize=12)
-    ax.set_title("Timescale Components Distribution", fontsize=13)
-    ax.set_ylim(0, fracs.max() * 1.15)
-    fig.tight_layout()
-    out = os.path.join(output_dir, "plot_01_n_components.png")
-    fig.savefig(out, **FIG_KW)
-    plt.show()
-    print(f"Saved: {out}")
-
 # ==============================================================================
 # Effective Intrinsic Timescale x Firing Rate
 # ==============================================================================
@@ -110,12 +81,40 @@ def plot_02_fr(df, output_dir):
     fig.savefig(out, **FIG_KW)
     plt.show()
     print(f"Saved: {out}")
+    
+# ==============================================================================
+# Timescale Components Distribution
+# ==============================================================================
+def plot_03_n_components(df, output_dir):
+    if "n_components" not in df.columns:
+        print("WARNING: 'n_timescales' column not found -- skipping Timescale Components Distribution.")
+        return
+    counts = df["n_components"].value_counts().sort_index()
+    fracs  = counts / counts.sum() * 100
+
+    fig, ax = plt.subplots(figsize=(6, 5), **FIG_KW)
+    bars = ax.bar(fracs.index.astype(str), fracs.values,
+                  color=[COLOR_SHORT, COLOR_MID, COLOR_LONG, "#9467bd"],
+                  edgecolor="white", linewidth=0.6)
+    for bar, pct in zip(bars, fracs.values):
+        ax.text(bar.get_x() + bar.get_width() / 2,
+                bar.get_height() + 0.5, f"{pct:.1f}%",
+                ha="center", fontsize=10)
+    ax.set_xlabel("Number of Timescale Components", fontsize=12)
+    ax.set_ylabel("% of Units", fontsize=12)
+    ax.set_title("Timescale Components Distribution", fontsize=13)
+    ax.set_ylim(0, fracs.max() * 1.15)
+    fig.tight_layout()
+    out = os.path.join(output_dir, "plot_01_n_components.png")
+    fig.savefig(out, **FIG_KW)
+    plt.show()
+    print(f"Saved: {out}")
 
 
 # ==============================================================================
 # tau_eff Population Distribution
 # ==============================================================================
-def plot_03_tau_dist(df, output_dir):
+def plot_04_tau_dist(df, output_dir):
     vals = df[TAU].dropna()
     bins = np.logspace(np.log10(vals.quantile(0.005)),
                        np.log10(vals.quantile(0.995)), 60)
